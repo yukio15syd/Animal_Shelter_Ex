@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
+    <sys_ux_addon_event_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <controller/>
+        <description/>
+        <name>Pet Breed Event Mapping</name>
+        <parent_macroponent display_value="Animal record">8841193d838132107f44a2d54cda1e8e</parent_macroponent>
+        <source_component/>
+        <source_da display_value="pet_breed_please_action">be514747830932107f44a2d54cda1ec9</source_da>
+        <source_element_id>form</source_element_id>
+        <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-11 08:02:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c643cfc7830932107f44a2d54cda1e9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pet Breed Event Mapping</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_addon_event_mapping_c643cfc7830932107f44a2d54cda1e9e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-11 08:02:16</sys_updated_on>
+        <target_event display_value="Pet Breed Please">4ac9276c11ed62107f44ac2611958a6c</target_event>
+        <target_payload_mapping>{
+    "container": {
+        "fields": {
+            "container": {
+                "encodedRecord": {
+                    "binding": {
+                        "address": [
+                            "encodedRecord"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "label": {
+                    "binding": {
+                        "address": [
+                            "fieldLabel"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "referenceField": {
+                    "binding": {
+                        "address": [
+                            "referenceField"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "referenceKey": {
+                    "binding": {
+                        "address": [
+                            "referenceKey"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "serializedChanges": {
+                    "binding": {
+                        "address": [
+                            "serializedChanges"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "size": {
+                    "type": "JSON_LITERAL",
+                    "value": "md"
+                },
+                "sysId": {
+                    "binding": {
+                        "address": [
+                            "parentSysId"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "table": {
+                    "binding": {
+                        "address": [
+                            "parentTable"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                }
+            },
+            "type": "MAP_CONTAINER"
+        },
+        "params": {
+            "type": "JSON_LITERAL",
+            "value": {}
+        },
+        "route": {
+            "type": "JSON_LITERAL",
+            "value": "modal_ref_lookup"
+        },
+        "size": {
+            "type": "JSON_LITERAL",
+            "value": "lg"
+        }
+    },
+    "type": "MAP_CONTAINER"
+}</target_payload_mapping>
+    </sys_ux_addon_event_mapping>
+</record_update>

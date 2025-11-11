@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">34c76d3a834532107f44a2d54cda1ebf</macroponent>
+        <name>Pre-populate Start and End DT</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function handler({ api, event, helpers, imports }) {
+    //console.log("]]>📘<![CDATA[ Client Script started");
+    //console.log("Event name:", event.type);
+    //console.log("Event payload received:", event.payload);
+
+    //If EVENT is 'Grid Clicked for new Event', use these payload values
+    var startVar = event.payload.newStartMS;
+    var endVar = event.payload.newEndMS;
+
+    //If EVENT is 'Grid double clicked', use these payload values
+    if (startVar == null && endVar == null) {
+        startVar = event.payload.startTimeMS;
+        endVar = event.payload.endTimeMS;
+    //    console.log("Using double-click payload values");
+    } else {
+    //    console.log("Using new event payload values");
+    }
+
+    // Log what you’re about to convert
+    //console.log("startVar:", startVar, "endVar:", endVar);
+
+    var sDate = new Date(startVar);
+    var eDate = new Date(endVar);
+
+    var formatStartDate =
+        sDate.getFullYear() + "-" +
+        ("0" + (sDate.getMonth() + 1)).slice(-2) + "-" +
+        ("0" + sDate.getDate()).slice(-2) + " " +
+        ("0" + sDate.getHours()).slice(-2) + ":" +
+        ("0" + sDate.getMinutes()).slice(-2) + ":" +
+        ("0" + sDate.getSeconds()).slice(-2);
+
+    var formatEndDate =
+        eDate.getFullYear() + "-" +
+        ("0" + (eDate.getMonth() + 1)).slice(-2) + "-" +
+        ("0" + eDate.getDate()).slice(-2) + " " +
+        ("0" + eDate.getHours()).slice(-2) + ":" +
+        ("0" + eDate.getMinutes()).slice(-2) + ":" +
+        ("0" + eDate.getSeconds()).slice(-2);
+
+    //console.log("Formatted Start:", formatStartDate);
+    //console.log("Formatted End:", formatEndDate);
+
+    // update the client state parameters with these default date/times
+    api.setState("eventStartDT", formatStartDate);
+    api.setState("eventEndDT", formatEndDate);
+
+    //console.log("✅ Client state updated with new values");
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-10 08:18:21</sys_created_on>
+        <sys_id>192c79b283c532107f44a2d54cda1e59</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Pre-populate Start and End DT</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_client_script_192c79b283c532107f44a2d54cda1e59</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-10 09:07:32</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

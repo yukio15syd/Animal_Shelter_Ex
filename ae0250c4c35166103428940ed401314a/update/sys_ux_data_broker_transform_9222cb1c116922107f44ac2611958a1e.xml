@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
+    <sys_ux_data_broker_transform action="INSERT_OR_UPDATE">
+        <acl_failure_result/>
+        <api_name>x_snc_animal_she_0.Create Event AK</api_name>
+        <batch_exclude>false</batch_exclude>
+        <description/>
+        <mutates_server_data>true</mutates_server_data>
+        <name>Create Event AK</name>
+        <output_schema/>
+        <private>false</private>
+        <props>[&#13;
+{&#13;
+"name": "table",&#13;
+"label": "Table",&#13;
+"description": "Table to create record in",&#13;
+"readOnly": false,&#13;
+"fieldType": "table_name",&#13;
+"mandatory": true,&#13;
+"defaultValue": ""&#13;
+},&#13;
+{&#13;
+"name": "eventName",&#13;
+"label": "Event Name",&#13;
+"description": "Name of event",&#13;
+"readOnly": false,&#13;
+"fieldType": "string",&#13;
+"mandatory": true,&#13;
+"defaultValue": ""&#13;
+},&#13;
+{&#13;
+"name": "shortDesc",&#13;
+"label": "Short description",&#13;
+"description": "Short description of event",&#13;
+"readOnly": false,&#13;
+"fieldType": "string",&#13;
+"mandatory": true,&#13;
+"defaultValue": ""&#13;
+},&#13;
+{&#13;
+"name": "eventStart",&#13;
+"label": "Start date/time",&#13;
+"description": "Start of event",&#13;
+"readOnly": false,&#13;
+"fieldType": "string",&#13;
+"mandatory": true,&#13;
+"defaultValue": ""&#13;
+},&#13;
+{&#13;
+"name": "eventEnd",&#13;
+"label": "End date/time",&#13;
+"description": "End of event",&#13;
+"readOnly": false,&#13;
+"fieldType": "string",&#13;
+"mandatory": true,&#13;
+"defaultValue": ""&#13;
+}&#13;
+]</props>
+        <required_translations>[ {
+  "message" : "End date/time",
+  "comment" : ""
+}, {
+  "message" : "End of event",
+  "comment" : ""
+}, {
+  "message" : "Event Name",
+  "comment" : ""
+}, {
+  "message" : "Name of event",
+  "comment" : ""
+}, {
+  "message" : "Short description",
+  "comment" : ""
+}, {
+  "message" : "Short description of event",
+  "comment" : ""
+}, {
+  "message" : "Start date/time",
+  "comment" : ""
+}, {
+  "message" : "Start of event",
+  "comment" : ""
+}, {
+  "message" : "Table",
+  "comment" : ""
+}, {
+  "message" : "Table to create record in",
+  "comment" : ""
+} ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function transform(input) {
+var theTable = input.table;
+var theName = input.eventName;
+var theStart = new GlideDateTime(input.eventStart);
+var theEnd = new GlideDateTime(input.eventEnd);
+var theShortDesc = input.shortDesc;
+var eventGR = new GlideRecordSecure(theTable);
+eventGR.setValue("event_name", theName);
+eventGR.setValue("start_date_time", theStart);
+eventGR.setValue("end_date_time", theEnd);
+eventGR.setValue("short_description", theShortDesc);
+eventGR.insert();
+}]]></script>
+        <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-12 19:11:55</sys_created_on>
+        <sys_id>9222cb1c116922107f44ac2611958a1e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create Event AK</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_data_broker_transform_9222cb1c116922107f44ac2611958a1e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-12 19:19:48</sys_updated_on>
+    </sys_ux_data_broker_transform>
+    <sys_translated_text action="delete_multiple" query="documentkey=9222cb1c116922107f44ac2611958a1e"/>
+</record_update>

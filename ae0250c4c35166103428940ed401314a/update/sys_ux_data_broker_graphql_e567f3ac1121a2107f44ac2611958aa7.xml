@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_graphql">
+    <sys_ux_data_broker_graphql action="INSERT_OR_UPDATE">
+        <api_name>x_snc_animal_she_0.Get Breed AK</api_name>
+        <batch_exclude>false</batch_exclude>
+        <description>Returns a single breed and its image from the Dog API</description>
+        <mutates_server_data>false</mutates_server_data>
+        <name>Get Breed AK</name>
+        <output_schema/>
+        <private>false</private>
+        <props>[&#13;
+  {&#13;
+    "name": "name",&#13;
+    "label": "Breed Name",&#13;
+    "description": "Breed name &amp; image from api",&#13;
+    "fieldType": "string",&#13;
+    "mandatory": true&#13;
+  }&#13;
+]&#13;
+</props>
+        <query>query getBreed($name: String!) {&#13;
+ xSncAnimalShe0{&#13;
+  dogAPI {&#13;
+    getBreed(name: $name) {&#13;
+      name&#13;
+      image&#13;
+    }&#13;
+  }&#13;
+ }&#13;
+}&#13;
+</query>
+        <required_translations>[ {
+  "message" : "Breed Name",
+  "comment" : ""
+}, {
+  "message" : "Breed name &amp; image from api",
+  "comment" : ""
+} ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[(function buildQuery(query, inputs) { 
+         var qb = new GraphQLQueryBuilder(query, inputs);
+   // return appropriate query here
+    return qb; 
+   })(query, inputs);]]></script>
+        <sys_class_name>sys_ux_data_broker_graphql</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-13 17:44:41</sys_created_on>
+        <sys_id>e567f3ac1121a2107f44ac2611958aa7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Breed AK</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_data_broker_graphql_e567f3ac1121a2107f44ac2611958aa7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-13 17:44:41</sys_updated_on>
+        <type>query</type>
+        <use_record_domain>false</use_record_domain>
+    </sys_ux_data_broker_graphql>
+    <sys_translated_text action="delete_multiple" query="documentkey=e567f3ac1121a2107f44ac2611958aa7"/>
+</record_update>

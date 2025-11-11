@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_resolver">
+    <sys_graphql_resolver action="INSERT_OR_UPDATE">
+        <name>List Breed</name>
+        <schema display_value="DogAPI">7b7e1cbe755962107f44dba568ff0cf8</schema>
+        <script><![CDATA[(function process( /*ResolverEnvironment*/ env) {
+    var result = [];
+    var breedListMsg = new sn_ws.RESTMessageV2();
+    breedListMsg.setEndpoint("https://dog.ceo/api/breeds/list/all");
+    breedListMsg.setHttpMethod("GET");
+    var listResponse = breedListMsg.execute();
+    var listData = JSON.parse(listResponse.getBody());
+    var breeds = listData.message;
+    for (var breed in breeds) {
+        try {
+            var imageMsg = new sn_ws.RESTMessageV2();
+            imageMsg.setEndpoint("https://dog.ceo/api/breed/" + breed + "/images/random");
+            imageMsg.setHttpMethod("GET");
+            var imageResponse = imageMsg.execute();
+            var imageData = JSON.parse(imageResponse.getBody());
+            result.push({
+                name: breed,
+                image: imageData.message
+            });
+        } catch (e) {
+            result.push({
+                name: breed,
+                image: null
+            });
+        }
+    }
+    return result;
+})(env);]]></script>
+        <sys_class_name>sys_graphql_resolver</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-11 06:54:53</sys_created_on>
+        <sys_id>a114f60783c532107f44a2d54cda1ece</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>List Breed</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_graphql_resolver_a114f60783c532107f44a2d54cda1ece</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-11 06:54:53</sys_updated_on>
+    </sys_graphql_resolver>
+</record_update>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="Animal Shelter">e48579a4c319e61026f69bf905013164</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>Animal List</name>
+        <optional_parameters>listId</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>animal-list</route_type>
+        <screen_type display_value="Animal List">65377568c319e61026f69bf905013174</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>jillian</sys_created_by>
+        <sys_created_on>2025-04-30 22:06:18</sys_created_on>
+        <sys_id>bd377568c319e61026f69bf905013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Animal List</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_app_route_bd377568c319e61026f69bf905013176</sys_update_name>
+        <sys_updated_by>jillian</sys_updated_by>
+        <sys_updated_on>2025-04-30 22:06:18</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=bd377568c319e61026f69bf905013176"/>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{
+    "table": "x_snc_animal_she_0_animal",
+    "sysId": "31246408c3d166103428940ed40131a3",
+    "query": "",
+    "extraParams": "",
+    "views": "",
+    "selectedTab": ""
+}</macroponent_config>
+        <screen display_value="Animal record">e5967d28c319e61026f69bf9050131da</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>jillian</sys_created_by>
+        <sys_created_on>2025-04-30 22:03:34</sys_created_on>
+        <sys_id>65967d28c319e61026f69bf9050131df</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_65967d28c319e61026f69bf9050131df</sys_update_name>
+        <sys_updated_by>jillian</sys_updated_by>
+        <sys_updated_on>2025-04-30 22:04:47</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>

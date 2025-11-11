@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-13 15:02:53</sys_created_on>
+        <sys_id>a0e2d36011ad62107f44ac2611958a67</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.admin</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_security_acl display_value="dc02532011ad62107f44ac2611958ade">5bd2d36011ad62107f44ac2611958a45</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_a0e2d36011ad62107f44ac2611958a67</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-13 15:02:53</sys_updated_on>
+        <sys_user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

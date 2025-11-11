@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_resolver">
+    <sys_graphql_resolver action="INSERT_OR_UPDATE">
+        <name>Sync Dog Breeds</name>
+        <schema display_value="DogAPI">7b7e1cbe755962107f44dba568ff0cf8</schema>
+        <script><![CDATA[(function process( /* ResolverEnvironment */ env) {
+    var insertedCount = 0;
+    var insertedBreeds = [];
+
+    // Fetch breed list
+    var breedListMsg = new sn_ws.RESTMessageV2();
+    breedListMsg.setEndpoint("https://dog.ceo/api/breeds/list/all");
+    breedListMsg.setHttpMethod("GET");
+    var listResponse = breedListMsg.execute();
+    var listData = JSON.parse(listResponse.getBody());
+    var breeds = listData.message;
+	
+    // Loop through each breed
+    for (var breed in breeds) {
+        try {
+            // Fetch random image for breed
+            var imageMsg = new sn_ws.RESTMessageV2();
+            imageMsg.setEndpoint("https://dog.ceo/api/breed/" + breed +
+                "/images/random");
+            imageMsg.setHttpMethod("GET");
+            var imageResponse = imageMsg.execute();
+            var imageData = JSON.parse(imageResponse.getBody());
+            var imageUrl = imageData.message;
+            // Check if breed already exists
+            var existing = new GlideRecord('x_snc_animal_she_0_animal');
+            existing.addQuery('breed', breed);
+            existing.query();
+            if (!existing.next()) {
+                // Insert new record into x_snc_animal_she_0_animal
+                var animal = new GlideRecord('x_snc_animal_she_0_animal');
+                animal.initialize();
+                animal.name = ""; // Optionally set later
+                animal.breed = breed;
+                animal.status = "available"; // Example default value
+                animal.picture = imageUrl;
+                animal.insert();
+                insertedCount++;
+                insertedBreeds.push(breed);
+                gs.info("Inserted: " + breed);
+            } else {
+                gs.info("Already exists: " + breed);
+            }
+        } catch (e) {
+            gs.error("Error syncing breed: " + breed + " - " + e.message);
+        }
+    }
+    // Return sync result
+    return {
+        message: "Inserted " + insertedCount + " new dog breeds.",
+        insertedCount: insertedCount,
+        insertedBreeds: insertedBreeds
+    };
+})(env);]]></script>
+        <sys_class_name>sys_graphql_resolver</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-12 20:58:49</sys_created_on>
+        <sys_id>139a979811e922107f44ac2611958a96</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Sync Dog Breeds</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_graphql_resolver_139a979811e922107f44ac2611958a96</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-12 20:59:05</sys_updated_on>
+    </sys_graphql_resolver>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_list_category">
+    <sys_ux_list_category action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <configuration display_value="Animal Shelter List">70251631830932107f44a2d54cda1e3e</configuration>
+        <description/>
+        <order>100</order>
+        <sys_class_name>sys_ux_list_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 07:25:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8c45d631830932107f44a2d54cda1e3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Animals</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_list_category_8c45d631830932107f44a2d54cda1e3b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 07:25:37</sys_updated_on>
+        <title>Animals</title>
+    </sys_ux_list_category>
+</record_update>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">129bf614116922107f44ac2611958aa4</macroponent>
+        <name>calendar_1/now_default/events</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function evaluateProperty({
+    api,
+    helpers
+}) {
+    //Use this function to grab records from the Events table using
+    //the Look up Event records data resource, then convert the
+    //record data into a JSON format that the Calendar component requires.
+    const eventArray = api.data.look_up_event_records.results;
+    var calendarArray = [];
+    for (var i = 0; i < eventArray.length; i++) {
+        //console.log("event DR object = " + JSON.stringify(eventArray[i], null, 4));
+        const calObj = {
+            'id': eventArray[i]._row_data.uniqueValue,
+            'title': eventArray[i].event_name.displayValue,
+            'description': eventArray[i].short_description.displayValue,
+            'start': eventArray[i].start_date_time.displayValue,
+            'end': eventArray[i].end_date_time.displayValue
+        };
+        calendarArray.push(calObj);
+        //console.log("calObj = " + JSON.stringify(calObj, null, 4));
+    }
+    return calendarArray;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-12 18:56:31</sys_created_on>
+        <sys_id>2e9b3650116922107f44ac2611958a0a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>calendar_1/now_default/events</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_client_script_2e9b3650116922107f44ac2611958a0a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-12 18:56:31</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+</record_update>

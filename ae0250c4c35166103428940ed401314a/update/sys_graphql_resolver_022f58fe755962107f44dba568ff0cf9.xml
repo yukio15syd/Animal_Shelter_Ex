@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_resolver">
+    <sys_graphql_resolver action="INSERT_OR_UPDATE">
+        <name>Animal Birthday Generator</name>
+        <schema display_value="DogAPI">7b7e1cbe755962107f44dba568ff0cf8</schema>
+        <script><![CDATA[(function process( /*ResolverEnvironment*/ env) {
+
+    var assigner = new AnimalBirthdayGenerator();
+    var result = assigner.assignBirthdays();
+
+    return {
+        updated: result.updated,
+        failed: result.failed
+    };
+})(env);]]></script>
+        <sys_class_name>sys_graphql_resolver</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-07 15:28:26</sys_created_on>
+        <sys_id>022f58fe755962107f44dba568ff0cf9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Animal Birthday Generator</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_graphql_resolver_022f58fe755962107f44dba568ff0cf9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-07 15:28:26</sys_updated_on>
+    </sys_graphql_resolver>
+</record_update>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_definition">
+    <sys_declarative_action_payload_definition action="INSERT_OR_UPDATE">
+        <action_key>PET_BREED_ACTION</action_key>
+        <applicable_to>607c997b73210010fd843c78caf6a752,15920e6d534723003eddddeeff7b1244</applicable_to>
+        <description/>
+        <label>Pet Breed Please Action</label>
+        <payload_field_table>var__m_sys_declarative_action_payload_field_8d02c387830932107f44a2d54cda1e3e</payload_field_table>
+        <payload_template>{&#13;
+"referenceField": "{{fieldName}}",&#13;
+"referenceKey": "{{referenceKey}}",&#13;
+"referenceTable": "{{referenceTable}}",&#13;
+"fieldLabel": "{{label}}",&#13;
+"parentTable": "{{tableName}}",&#13;
+"parentSysId": "{{recordSysId}}",&#13;
+"encodedRecord": "{{encodedRecord}}",&#13;
+"serializedChanges": "{{serializedChanges}}",&#13;
+"fieldType": "{{fieldType}}",&#13;
+"value": "{{value}}",&#13;
+"displayValue": "{{displayValue}}",&#13;
+"dependentField": "{{dependentField}}",&#13;
+"dependentValue": "{{dependentValue}}"&#13;
+}</payload_template>
+        <sys_class_name>sys_declarative_action_payload_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-11 07:55:49</sys_created_on>
+        <sys_id>8d02c387830932107f44a2d54cda1e3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pet Breed Please Action</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_declarative_action_payload_definition_8d02c387830932107f44a2d54cda1e3e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-11 07:55:49</sys_updated_on>
+    </sys_declarative_action_payload_definition>
+</record_update>

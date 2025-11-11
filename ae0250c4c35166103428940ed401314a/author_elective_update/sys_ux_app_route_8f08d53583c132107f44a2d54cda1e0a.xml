@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="Animal Shelter">92ff49f5838132107f44a2d54cda1e3d</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>Animl Shelter Home</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>animl-shelter-home</route_type>
+        <screen_type display_value="Animl Shelter Home">8708d53583c132107f44a2d54cda1e08</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 02:57:59</sys_created_on>
+        <sys_id>8f08d53583c132107f44a2d54cda1e0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Animl Shelter Home</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_app_route_8f08d53583c132107f44a2d54cda1e0a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 02:57:59</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=8f08d53583c132107f44a2d54cda1e0a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</application>
+        <file_path/>
+        <instance_id>bb95d85597c53a54be7a7b2e6253af6d</instance_id>
+        <instance_name>nowlearning-nlinst03447299-84xrj-0001</instance_name>
+        <name>sys_ux_app_route_8f08d53583c132107f44a2d54cda1e0a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="Animal Shelter">92ff49f5838132107f44a2d54cda1e3d</app_config><description/><extension_point/><fields/><icon/><name>Animl Shelter Home</name><optional_parameters/><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>animl-shelter-home</route_type><screen_type display_value="Animl Shelter Home">8708d53583c132107f44a2d54cda1e08</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-11-07 02:57:59</sys_created_on><sys_id>8f08d53583c132107f44a2d54cda1e0a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Animl Shelter Home</sys_name><sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package><sys_policy/><sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope><sys_update_name>sys_ux_app_route_8f08d53583c132107f44a2d54cda1e0a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-11-07 02:57:59</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=8f08d53583c132107f44a2d54cda1e0a"/></record_update>]]></payload>
+        <payload_hash>1626216579</payload_hash>
+        <record_name>Animl Shelter Home</record_name>
+        <reverted_from/>
+        <source>a18ec939838132107f44a2d54cda1e90</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 02:57:59</sys_created_on>
+        <sys_id>c308157583c132107f44a2d54cda1ef2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a5c3fd70c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 02:57:59</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>c7081575ffc132100b056065dec6cef1</update_guid>
+        <update_guid_history>c7081575ffc132100b056065dec6cef1:1626216579</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-07 03:00:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>595fa9339cb749dca5064447c5570710</sys_id>
+        <sys_metadata>8f08d53583c132107f44a2d54cda1e0a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Animl Shelter Home</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_scope_delete display_value="">2a41a985d3d942a6b0a57c1fb5231e11</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_8f08d53583c132107f44a2d54cda1e0a</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_8f08d53583c132107f44a2d54cda1e0a">c308157583c132107f44a2d54cda1ef2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-07 03:00:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

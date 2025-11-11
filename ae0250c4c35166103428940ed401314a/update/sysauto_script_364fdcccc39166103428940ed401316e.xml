@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Fix Events and Appointment's dates</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="">cf4e364ac375c21026f69bf90501311d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-04-29 02:25:11</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[/**
+ * Randomizes event and appointment records:
+ * - First 10 records are placed in the current week.
+ * - Remaining records are randomized 2-4 weeks out.
+ * - Events: start_date_time + end_date_time (1 hour apart)
+ * - Appointments: appointment_date
+ * - Max 10 records per week after first 10
+ */
+
+(function() {
+    var tables = [
+        {
+            name: "x_snc_animal_she_0_event",
+            process: function(rec, useCurrentWeek) {
+                var randomDateTime = useCurrentWeek ? generateRandomDateTimeInCurrentWeek() : generateRandomDateTimeFuture();
+                rec.start_date_time = randomDateTime.getValue();
+
+                var endDateTime = new GlideDateTime(randomDateTime);
+                endDateTime.addSeconds(3600); // Add 1 hour = 3600 seconds
+                rec.end_date_time = endDateTime.getValue();
+            }
+        },
+        {
+            name: "x_snc_animal_she_0_appointment",
+            process: function(rec, useCurrentWeek) {
+                var randomDateTime = useCurrentWeek ? generateRandomDateTimeInCurrentWeek() : generateRandomDateTimeFuture();
+                rec.appointment_date = randomDateTime.getValue();
+            }
+        }
+    ];
+
+    for (var i = 0; i < tables.length; i++) {
+        var tbl = tables[i];
+        var gr = new GlideRecord(tbl.name);
+        gr.query();
+
+        var recordCounter = 0;
+        var weekCounters = {};
+
+        while (gr.next()) {
+            var useCurrentWeek = (recordCounter < 10); // First 10 go in current week
+            var randomDateTime = useCurrentWeek ? generateRandomDateTimeInCurrentWeek() : generateRandomDateTimeFuture();
+            var weekNumber = randomDateTime.getWeekOfYearLocalTime();
+
+            if (!weekCounters[weekNumber]) {
+                weekCounters[weekNumber] = 0;
+            }
+
+            if (useCurrentWeek || weekCounters[weekNumber] < 10) {
+                tbl.process(gr, useCurrentWeek);
+                gr.autoSysFields(false);
+                gr.setWorkflow(false);
+                gr.update();
+                weekCounters[weekNumber]++;
+                recordCounter++;
+            }
+        }
+    }
+
+    /**
+     * Generate a random GlideDateTime in the current week (today to Saturday).
+     */
+    function generateRandomDateTimeInCurrentWeek() {
+        var now = new GlideDateTime();
+        var todayDay = now.getDayOfWeekLocalTime(); // Monday = 1, Sunday = 7
+        var daysUntilSaturday = 6 - todayDay; // Saturday is day 6
+        
+        var randomDaysAhead = getRandomInt(0, Math.max(daysUntilSaturday, 0));
+        var randomHours = getRandomInt(0, 23);
+        var randomMinutes = getRandomInt(0, 59);
+
+        now.addDaysLocalTime(randomDaysAhead);
+        now.addSeconds(randomHours * 3600);
+        now.addSeconds(randomMinutes * 60);
+
+        return now;
+    }
+
+    /**
+     * Generate a random GlideDateTime between 2-4 weeks from now.
+     */
+    function generateRandomDateTimeFuture() {
+        var now = new GlideDateTime();
+        var randomDays = getRandomInt(14, 28); // Between 2–4 weeks
+        var randomHours = getRandomInt(0, 23);
+        var randomMinutes = getRandomInt(0, 59);
+
+        now.addDaysLocalTime(randomDays);
+        now.addSeconds(randomHours * 3600);
+        now.addSeconds(randomMinutes * 60);
+
+        return now;
+    }
+
+    /**
+     * Utility to get random integer between min and max inclusive.
+     */
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+})();
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>mgopw</sys_created_by>
+        <sys_created_on>2025-04-29 02:35:20</sys_created_on>
+        <sys_id>364fdcccc39166103428940ed401316e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Fix Events and Appointment's dates</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sysauto_script_364fdcccc39166103428940ed401316e</sys_update_name>
+        <sys_updated_by>mgopw</sys_updated_by>
+        <sys_updated_on>2025-04-29 02:58:52</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

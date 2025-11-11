@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="appointment_type" table="x_snc_animal_she_0_appointment" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>appointment_type</element>
+            <name>x_snc_animal_she_0_appointment</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 02:06:54</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>appointment_type</sys_name>
+            <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+            <sys_update_name>sys_choice_x_snc_animal_she_0_appointment_appointment_type</sys_update_name>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 02:06:54</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>appointment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pet visit</label>
+            <language>en</language>
+            <name>x_snc_animal_she_0_appointment</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 02:06:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 02:06:54</sys_updated_on>
+            <value>pet_visit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>appointment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Donation</label>
+            <language>en</language>
+            <name>x_snc_animal_she_0_appointment</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 02:06:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 02:06:54</sys_updated_on>
+            <value>donation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>appointment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Volunteer</label>
+            <language>en</language>
+            <name>x_snc_animal_she_0_appointment</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 02:06:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 02:06:54</sys_updated_on>
+            <value>volunteer</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

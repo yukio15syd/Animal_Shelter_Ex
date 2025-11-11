@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config">
+    <sys_ux_app_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <custom_icon/>
+        <default_route_type/>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <encode_query_string>false</encode_query_string>
+        <icon/>
+        <landing_path>animal-shelter-home-page</landing_path>
+        <name>Animal Shelter</name>
+        <prefetch_limits/>
+        <sys_class_name>sys_ux_app_config</sys_class_name>
+        <sys_created_by>jillian</sys_created_by>
+        <sys_created_on>2025-04-30 21:58:50</sys_created_on>
+        <sys_id>e48579a4c319e61026f69bf905013164</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Animal Shelter</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_app_config_e48579a4c319e61026f69bf905013164</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-12 14:54:32</sys_updated_on>
+    </sys_ux_app_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=e48579a4c319e61026f69bf905013164"/>
+</record_update>

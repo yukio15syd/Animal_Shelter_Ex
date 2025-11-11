@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">129bf614116922107f44ac2611958aa4</macroponent>
+        <name>Pre-populate Start and End DT</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+    //If EVENT is 'Grid Clicked for new Event', use these payload values
+    //these payload values relate to the date/time of the current day
+    var startVar = event.payload.newStartMS;
+    var endVar = event.payload.newEndMS;
+
+    //If EVENT is 'Grid double clicked', use these payload values
+    //these payload values relate to the date/time of the grid clicked on
+    if (startVar == null && endVar == null) {
+        startVar = event.payload.startTimeMS;
+        endVar = event.payload.endTimeMS;
+    }
+    var sDate = new Date(startVar);
+    var eDate = new Date(endVar);
+    
+    //Format the date as: yyyy-MM-dd HH:mm:ss
+    var formatStartDate = sDate.getFullYear() + '-' +
+        ('0' + (sDate.getMonth() + 1)).slice(-2) + '-' +
+        ('0' + sDate.getDate()).slice(-2) + ' ' +
+        ('0' + sDate.getHours()).slice(-2) + ':' +
+        ('0' + sDate.getMinutes()).slice(-2) + ':' +
+        ('0' + sDate.getSeconds()).slice(-2);
+    var formatEndDate = eDate.getFullYear() + '-' +
+        ('0' + (eDate.getMonth() + 1)).slice(-2) + '-' +
+        ('0' + eDate.getDate()).slice(-2) + ' ' +
+        ('0' + eDate.getHours()).slice(-2) + ':' +
+        ('0' + eDate.getMinutes()).slice(-2) + ':' +
+        ('0' + eDate.getSeconds()).slice(-2);
+    //update the client state parameters with these default date/times
+    api.setState("eventStartDT", formatStartDate);
+    api.setState("eventEndDT", formatEndDate);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-12 20:07:55</sys_created_on>
+        <sys_id>ae9b3650116922107f44ac2611958a0a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Pre-populate Start and End DT</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_client_script_ae9b3650116922107f44ac2611958a0a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-12 20:18:43</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

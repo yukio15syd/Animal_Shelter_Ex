@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{
+    "listId": "",
+    "5865e308432021105571609dc7b8f23b": {
+        "allRecordsSelected": null,
+        "childrenRowLimit": null,
+        "columnLimit": null,
+        "columns": null,
+        "currentPage": null,
+        "enableBadgeCount": null,
+        "enableCellFiltering": null,
+        "enableColumnFiltering": null,
+        "enableColumnGrouping": null,
+        "enableColumnSorting": null,
+        "enableDeclarativeActions": true,
+        "enableDotWalk": null,
+        "enableInfiniteScroll": null,
+        "enableLiveList": null,
+        "enableQuickFormNavigation": true,
+        "enableReferenceLinks": null,
+        "enforceViewRulesForQuickForm": true,
+        "fetchHighlightedValues": true,
+        "filter": null,
+        "fixedFilter": null,
+        "groupBy": null,
+        "listId": null,
+        "listMenuConfigurationId": "d305c0a873601010a0a79329faf6a7cb",
+        "listTitle": null,
+        "listType": "withMenu",
+        "nestBy": null,
+        "onlyEnableSelectionWhenRequiredByActions": null,
+        "parentRecordSysId": null,
+        "parentTable": null,
+        "relatedListName": null,
+        "rowLimit": null,
+        "table": null,
+        "transformScriptArgs": null,
+        "transformScriptSysId": null,
+        "view": null
+    }
+}</macroponent_config>
+        <screen display_value="Default">713735a8c319e61026f69bf905013145</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>jillian</sys_created_by>
+        <sys_created_on>2025-04-30 22:06:18</sys_created_on>
+        <sys_id>b13735a8c319e61026f69bf905013148</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_b13735a8c319e61026f69bf905013148</sys_update_name>
+        <sys_updated_by>jillian</sys_updated_by>
+        <sys_updated_on>2025-05-01 00:24:18</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>

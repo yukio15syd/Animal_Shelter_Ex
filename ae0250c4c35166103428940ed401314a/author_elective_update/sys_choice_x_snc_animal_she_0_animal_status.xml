@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="status" table="x_snc_animal_she_0_animal" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <name>x_snc_animal_she_0_animal</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 01:38:41</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>status</sys_name>
+            <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+            <sys_update_name>sys_choice_x_snc_animal_she_0_animal_status</sys_update_name>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 01:38:41</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Available</label>
+            <language>en</language>
+            <name>x_snc_animal_she_0_animal</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 01:38:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 01:38:41</sys_updated_on>
+            <value>available</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Adoption pending</label>
+            <language>en</language>
+            <name>x_snc_animal_she_0_animal</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 01:38:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 01:38:41</sys_updated_on>
+            <value>adoption_pending</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Medical hold</label>
+            <language>en</language>
+            <name>x_snc_animal_she_0_animal</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 01:38:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 01:38:41</sys_updated_on>
+            <value>medical_hold</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Adopted</label>
+            <language>en</language>
+            <name>x_snc_animal_she_0_animal</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>mgopw</sys_created_by>
+            <sys_created_on>2025-04-29 01:38:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mgopw</sys_updated_by>
+            <sys_updated_on>2025-04-29 01:38:41</sys_updated_on>
+            <value>adopted</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

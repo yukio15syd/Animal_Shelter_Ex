@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config/>
+        <description/>
+        <extension_point display_value="Pet Visit Appts AK">eeda1ba811ad62107f44ac2611958ab3</extension_point>
+        <fields/>
+        <icon>bot-outline</icon>
+        <name>Pet Visit Appts</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>pet-visit-appts</route_type>
+        <screen_type display_value="Pet Visit Appts">5e5b9fa811ad62107f44ac2611958a9c</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-13 15:39:29</sys_created_on>
+        <sys_id>525bdfe811ad62107f44ac2611958aa1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Pet Visit Appts</sys_name>
+        <sys_package display_value="Animal Shelter Experience" source="x_snc_animal_she_0">ae0250c4c35166103428940ed401314a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Animal Shelter Experience">ae0250c4c35166103428940ed401314a</sys_scope>
+        <sys_update_name>sys_ux_app_route_525bdfe811ad62107f44ac2611958aa1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-13 16:12:06</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=525bdfe811ad62107f44ac2611958aa1"/>
+</record_update>
